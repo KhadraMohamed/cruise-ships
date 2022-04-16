@@ -1,10 +1,12 @@
-function Ship (Port) {
-    this.name = Ship;
-    this.currentPort = Port;
+function Ship (currentPort) {
+    this.currentPort = currentPort;
+    this.previousPort = null;
 }
 Ship.prototype.setSail = function () {
-    this.setSail = false
+    this.previousPort = this.currentPort;
+    this.currentPort = false;
 }
+
 Ship.prototype.dock = function (Port) {
     this.currentPort = Port;
 }
