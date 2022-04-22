@@ -15,10 +15,7 @@ describe ('Ship' , () => {
             ship = new Ship(itinerary);
           }); 
     it('can be instantiated' , () => {
-            const port = new Port ('Dover');
-            const itinerary = new Itinerary ([port]);
-            const ship = new Ship(itinerary); 
-            expect(ship).toBeInstanceOf(Object);  
+        expect(ship).toBeInstanceOf(Object);  
     });
     it('has a starting port' , () => {
         const port = new Port('Dover');
