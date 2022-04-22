@@ -1,6 +1,12 @@
 const Port = require ('../src/Port.js');
 
 describe ('Port' , () => {
+    describe ('Ports can add and remove a ship' , () => {
+        let port;
+        beforeEach(() => {
+        port = new Port ('Dover');
+        ship = {};  
+    });
     it('can be instantiated' , () => {
         expect(new Port()).toBeInstanceOf(Object);
 });
@@ -19,4 +25,5 @@ it('can remove a ship' , () => {
     port.removeShip(queenMary);
     expect(port.ships).toEqual([queenMary]);
 });
+    });
 });
