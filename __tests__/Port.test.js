@@ -4,22 +4,22 @@ describe ('Port' , () => {
     describe ('Ports can add and remove a ship' , () => {
         let port;
         beforeEach(() => {
-        port = new Port ('Dover');
-        ship = {};  
+        port = jest.fn();
+        ship = jest.fn();  
     });
     it('can be instantiated' , () => {
         expect(new Port()).toBeInstanceOf(Object);
 });
 it('can add a ship' ,() => {
     const port = new Port ('Dover');
-    const ship = {};
+    const ship = jest.fn();
     port.addShip(ship);
     expect(port.ships).toContain(ship);
 });
 it('can remove a ship' , () => {
     const port = new Port ('Dover');
     const titanic = {};
-    const queenMary = {}
+    const queenMary = {};
     port.addShip(titanic);
     port.addShip(queenMary);
     port.removeShip(queenMary);
